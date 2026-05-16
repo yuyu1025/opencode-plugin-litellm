@@ -1,0 +1,9 @@
+node_modules/
+coverage/
+dist/
+*.tgz
+*.log
+.DS_Store
+.env
+.env.*
+.opencode/

@@ -1,0 +1,26 @@
+name: Feature request
+description: Suggest a focused improvement.
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: What real OpenCode + LiteLLM workflow does this improve?
+    validations:
+      required: true
+  - type: textarea
+    id: simpler
+    attributes:
+      label: Simpler alternative
+      description: Can this be solved with existing OpenCode or LiteLLM config?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Keep it small and debuggable.
+    validations:
+      required: true

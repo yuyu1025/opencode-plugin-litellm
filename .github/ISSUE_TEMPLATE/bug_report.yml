@@ -1,0 +1,50 @@
+name: Bug report
+description: Report a reproducible OpenCode + LiteLLM problem.
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: input
+    id: opencode-version
+    attributes:
+      label: OpenCode version
+      placeholder: "opencode --version"
+    validations:
+      required: true
+  - type: input
+    id: litellm-version
+    attributes:
+      label: LiteLLM version
+      placeholder: "litellm --version"
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: OpenCode config
+      description: Remove API keys and private URLs before posting.
+      render: json
+    validations:
+      required: true
+  - type: textarea
+    id: models-response
+    attributes:
+      label: LiteLLM /v1/models response
+      description: Include a redacted sample if model discovery is the problem.
+      render: json
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Remove secrets before posting.
+      render: text
+    validations:
+      required: false
