@@ -10,7 +10,15 @@ Recommended repository:
 yuyu1025/opencode-plugin-litellm
 ```
 
-Use a public repository. The package name, README badges, and package metadata all assume that repository.
+Use a public repository. README badges and package metadata assume that repository.
+
+Recommended npm package:
+
+```text
+@yuyu1025/opencode-plugin-litellm
+```
+
+The unscoped npm name `opencode-plugin-litellm` is already owned by another maintainer. Do not use it in this project.
 
 ## Release Checklist
 
@@ -35,7 +43,7 @@ Use a public repository. The package name, README badges, and package metadata a
    ```json
    {
      "$schema": "https://opencode.ai/config.json",
-     "plugin": ["opencode-plugin-litellm"]
+     "plugin": ["@yuyu1025/opencode-plugin-litellm"]
    }
    ```
 

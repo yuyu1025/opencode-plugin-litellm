@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- Use the scoped npm package name `@yuyu1025/opencode-plugin-litellm` to avoid the existing unscoped `opencode-plugin-litellm` package.
+
 ## 0.1.0
 
 - Register `LiteLLM` as an OpenCode provider.

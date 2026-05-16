@@ -36,7 +36,7 @@ Add the plugin to your OpenCode config:
 ```json
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["opencode-plugin-litellm"]
+  "plugin": ["@yuyu1025/opencode-plugin-litellm"]
 }
 ```
 
@@ -69,7 +69,7 @@ You can provide plugin defaults directly in OpenCode config:
   "$schema": "https://opencode.ai/config.json",
   "plugin": [
     [
-      "opencode-plugin-litellm",
+      "@yuyu1025/opencode-plugin-litellm",
       {
         "baseURL": "http://127.0.0.1:4000/v1",
         "apiKey": "",
