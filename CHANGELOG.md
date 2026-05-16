@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- Use the publishable npm package name `@finger_xie/opencode-plugin-litellm`.
+
 ## 0.1.1
 
 - Use the scoped npm package name `@yuyu1025/opencode-plugin-litellm` to avoid the existing unscoped `opencode-plugin-litellm` package.

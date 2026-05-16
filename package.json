@@ -1,6 +1,6 @@
 {
-  "name": "@yuyu1025/opencode-plugin-litellm",
-  "version": "0.1.1",
+  "name": "@finger_xie/opencode-plugin-litellm",
+  "version": "0.1.2",
   "description": "OpenCode plugin for connecting to LiteLLM through an OpenAI-compatible provider.",
   "type": "module",
   "author": "yuyu1025",

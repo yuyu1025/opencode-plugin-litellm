@@ -7,7 +7,7 @@ Check that the plugin is listed in your OpenCode config:
 ```json
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["@yuyu1025/opencode-plugin-litellm"]
+  "plugin": ["@finger_xie/opencode-plugin-litellm"]
 }
 ```
 
@@ -79,7 +79,7 @@ The default model discovery timeout is 2000 ms. Increase it when LiteLLM is behi
   "$schema": "https://opencode.ai/config.json",
   "plugin": [
     [
-      "@yuyu1025/opencode-plugin-litellm",
+      "@finger_xie/opencode-plugin-litellm",
       {
         "modelsTimeoutMs": 5000
       }
@@ -116,6 +116,6 @@ If LiteLLM does not return useful model metadata, define the model yourself. The
       }
     }
   },
-  "plugin": ["@yuyu1025/opencode-plugin-litellm"]
+  "plugin": ["@finger_xie/opencode-plugin-litellm"]
 }
 ```

@@ -15,10 +15,10 @@ Use a public repository. README badges and package metadata assume that reposito
 Recommended npm package:
 
 ```text
-@yuyu1025/opencode-plugin-litellm
+@finger_xie/opencode-plugin-litellm
 ```
 
-The unscoped npm name `opencode-plugin-litellm` is already owned by another maintainer. Do not use it in this project.
+The unscoped npm name `opencode-plugin-litellm` is already owned by another maintainer. The npm scope `@yuyu1025` does not exist for the current npm account. Use the publishable `@finger_xie` scope unless that changes.
 
 ## Release Checklist
 
@@ -43,7 +43,7 @@ The unscoped npm name `opencode-plugin-litellm` is already owned by another main
    ```json
    {
      "$schema": "https://opencode.ai/config.json",
-     "plugin": ["@yuyu1025/opencode-plugin-litellm"]
+     "plugin": ["@finger_xie/opencode-plugin-litellm"]
    }
    ```
 
