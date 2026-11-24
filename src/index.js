@@ -10,6 +10,7 @@ import {
   readStoredAuth,
   resolveSettings,
 } from "./litellm.js"
+import { LiteLLMPluginV2, PLUGIN_ID } from "./v2.js"
 
 async function log(client, level, message, extra = {}) {
   try {
@@ -153,4 +154,12 @@ function apiKeyForConfig({ auth, provider, options }) {
   return ""
 }
 
-export default LiteLLMPlugin
+export { LiteLLMPluginV2 }
+
+// One default export serves both hosts: OpenCode 1.x calls `server`,
+// OpenCode 2.x calls `setup`.
+export default {
+  id: PLUGIN_ID,
+  server: LiteLLMPlugin,
+  setup: LiteLLMPluginV2.setup,
+}

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0
+
+- Support OpenCode 2.x: the default export is now a plugin definition (`{ id, server, setup }`) that loads on both OpenCode 1.x and 2.x. Fixes `Plugin must export a default definition with an id and an effect or setup function`.
+- On OpenCode 2.x, register a LiteLLM integration and provider via the V2 plugin API, with periodic model re-discovery (`refreshIntervalMs`).
+
 ## 0.1.2
 
 - Use the publishable npm package name `@finger_xie/opencode-plugin-litellm`.
