@@ -23,7 +23,7 @@ If this saves you from hand-editing provider config, star the repo so other Open
 
 ## Requirements
 
-- OpenCode with plugin support
+- OpenCode 1.x (classic plugin API) or OpenCode 2.x (V2 plugin API); the same package supports both
 - LiteLLM exposing an OpenAI-compatible API, usually `http://127.0.0.1:4000/v1`
 - Node.js 22 or newer for local development and tests
 
@@ -88,6 +88,8 @@ Environment variables are also supported:
 | `LITELLM_API_KEY` | LiteLLM API key | empty |
 | `LITELLM_MODELS_TIMEOUT_MS` | Timeout for model discovery | `2000` |
 
+On OpenCode 2.x the plugin also accepts `refreshIntervalMs` (default `60000`): how often the model list is re-fetched while OpenCode runs.
+
 Base URLs are normalized. These inputs all become `http://localhost:4000/v1`:
 
 ```text
@@ -126,6 +128,17 @@ Discovered models are merged into `provider.litellm.models` without overwriting 
 If LiteLLM is down, unreachable, unauthorized, slow, or returns invalid JSON, OpenCode startup continues. The plugin keeps a temporary `Connect LiteLLM` placeholder model so `LiteLLM` remains visible in `/connect`.
 
 When LiteLLM does not return context or output limits, the plugin leaves those values as `0` to mean unknown instead of inventing fake limits. You can override a model manually in `provider.litellm.models` if you need exact limits.
+
+### OpenCode 2.x
+
+OpenCode 2.x replaced the plugin API. There the plugin:
+
+- registers a `LiteLLM` integration (API key or `LITELLM_API_KEY`) so you can connect it from OpenCode;
+- adds a `litellm` provider using `@opencode/ai/providers/openai-compatible`, enabled once models are discovered;
+- re-discovers models every `refreshIntervalMs`, keeping the last good list if LiteLLM is briefly unreachable;
+- leaves any `litellm` provider settings and models you configured yourself untouched.
+
+There is no `Connect LiteLLM` placeholder model on 2.x, and models without reported limits get a 128k context / 16k output default.
 
 ## Troubleshooting
 
